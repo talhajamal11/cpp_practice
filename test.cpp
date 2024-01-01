@@ -7,7 +7,6 @@ void print(){
     }
 }
 
-
 void square(){
     int v[] = {1,2,3};
     for (auto& x : v){ // using & here as a reference so we apply increment on the array v itself and not a copy
@@ -34,7 +33,11 @@ int count(int* p, int x){
     return count;
 }
 
+int x = 10;
+int& r = x; // Reference to object can change value of object but not pointer
+
 int main(){
-    std::cout << count(array, 1) << "\n";
+    std::cout << x << std::endl;
+    std::cout << r << std::endl;
     return 0;    
 }
